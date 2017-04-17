@@ -1,0 +1,19 @@
+SMAP
+foreach_005fdemo_jsp.java
+JSP
+*S JSP
+*F
++ 0 foreach_demo.jsp
+foreach_demo.jsp
+*L
+5,15:59
+20,8:75
+27:83
+28:84,3
+29:87
+29:112,12
+30:124
+30:153,5
+30,2:127
+31,5:90
+*E

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        var person={'name':"tran Van Linh","age":"21","address":"HN","like":['bongda','canhac','thehinh']};
+         //alert(person.like[1]);
+       // var objects=JSON.stringify(person);
+       // alert(objects.name);
+//       var str='{ "name":"John", "age":30, "city":"New York"}';
+//       var obj= JSON.parse(str);
+//       alert(obj['name']);
+    </script>
+    </head>
+    <body>
+        <div id='content'>TODO write content</div>
+        <div id='result'></div>
+        <button onclick="load()">Click</button>
+        
+        <script>
+              function load()
+              {
+                    $(document).ready(function(){
+                        $('button').on('click',function(){
+                           $.ajax({
+                               dataType:'json',
+                               url:'json1.html',
+                               type:'GET',
+                               beforeSend:function()
+                               {
+                                   var str=$('#content').text()+" loading";
+                                   $('#content').text(str);
+                               },
+                               success:function(data)
+                               {
+//                                   var obj=JSON.parse(data);
+                                     console.log(data);
+                                 //  $('#result').text(obj.firstName);
+                                   //alert(obj.firstName);
+                               }
+                           });
+                    });
+              });
+          }
+          
+        </script>
+    </body>
+</html>
